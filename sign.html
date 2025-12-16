@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+
+<body>
+
+<h1>회원가입</h1>
+
+<form action="/submit" method="post">
+
+<h2>* 필수입력정보</h2>
+
+<table border="1" width="700">
+    <tr>
+        <th>아이디</th>
+        <td>
+            <input type="text" name="username">
+            <button type="button">중복확인</button>
+        </td>
+    </tr>
+
+    <tr>
+        <th>비밀번호</th>
+        <td>
+            <input type="password" name="password" placeholder="10자 이상의 영문과 숫자조합">
+        </td>
+    </tr>
+
+    <tr>
+        <th>연락처</th>
+        <td><input type="text" name="phone"></td>
+    </tr>
+
+    <tr>
+        <th>이름</th>
+        <td><input type="text" name="name"></td>
+    </tr>
+
+    <tr>
+        <th>이메일</th>
+        <td><input type="email" name="email"></td>
+    </tr>
+
+    <tr>
+        <th>전자우편신청</th>
+        <td>
+            <input type="radio" name="mail" value="yes"> 예 신청합니다
+            <input type="radio" name="mail" value="no"> 아니오 신청하지 않습니다
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<h2>* 선택입력정보</h2>
+
+<table border="1" width="700">
+    <tr>
+        <th>프로필사진</th>
+        <td><input type="file" name="profile"></td>
+    </tr>
+
+    <tr>
+        <th>생년월일</th>
+        <td><input type="date" name="birth"></td>
+    </tr>
+
+    <tr>
+        <th>성별</th>
+        <td>
+            <input type="radio" name="gender" value="male"> 남
+            <input type="radio" name="gender" value="female"> 여
+        </td>
+    </tr>
+
+    <tr>
+        <th>직업</th>
+        <td>
+            <select name="job">
+                <option>학생</option>
+                <option>회사원</option>
+                <option>무직</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <th>자기소개</th>
+        <td>
+            <textarea name="message" rows="4" cols="40"></textarea>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<button type="reset">취소</button>
+<button type="submit">회원가입</button>
+
+</form>
+
+</body>
+</html>
