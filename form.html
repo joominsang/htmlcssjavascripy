@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/submit" method="POST">
+    <!-- 텍스트 입력 -->
+    <label for="username">사용자명:</label>
+    <input type="text" id="username" name="username" required size = "40">
+    
+    <!-- 이메일 입력 -->
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com">
+    
+    <!-- 비밀번호 입력 -->
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" minlength="8">
+    
+    <!-- 라디오 버튼 -->
+    <fieldset>
+      <legend>성별</legend>
+      <label>
+        <input type="radio" name="gender" value="male"> 남성
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female"> 여성
+      </label>
+    </fieldset>
+    
+    <!-- 체크박스 -->
+    <label>
+      <input type="checkbox" name="agree" required>
+      약관에 동의합니다
+    </label>
+    
+    <!-- 선택 박스 -->
+    <label for="country">국가:</label>
+    <select id="country" name="country">
+      <option value="">선택하세요</option>
+      <option value="kr">한국</option>
+      <option value="us">미국</option>
+      <option value="jp">일본</option>
+    </select>
+    
+    <!-- 텍스트 영역 -->
+    <label for="message">메시지:</label>
+    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+    
+    <!-- 제출 버튼 -->
+    <button type="submit">제출</button>
+    <button type="reset">초기화</button>
+  </form>
+</body>
+</html>

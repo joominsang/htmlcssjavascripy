@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>테이블 표현(html5에서는 잘 사용안하고 div 태그로 flex, grid 사용)</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>학생 이름</th>
+            <th>평균 점수</th>
+            <th>등수</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">홍길동</td>
+                <td>88.5</td>
+                <td rowspan="2">4</td>
+            </tr>
+               <tr>
+                <td rowspan="2">이순신</td>
+                <td>95.2</td>
+                <td rowspan="2">3</td>
+            </tr>
+               <tr>
+                <td rowspan="2">신사임당</td>
+                <td>98.4</td>
+                <td rowspan="2">1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">전체 평균</td>
+                <td>93.4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td colspan="2">2개 열 병합</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2개 열 병합</td>
+            <td>일반 셀</td>
+        </tr>
+        <tr>
+            <td>일반 셀</td>
+        </tr>
+    </table>
+</body>
+</html>
