@@ -1,40 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    .html_container{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header_container {
+      display: flex;
+      flex-direction: column;
+    }
+    .header_item1 {
+      display: flex;
+    }
+    .logo { margin: 3px; }
+    .search { margin: 3px; width: 200px; }
+    .gnb { margin: 3px; margin-left: auto; }
+
+    .header_item2 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .header_item2 div {
+      margin: 3px;
+    }
+
+    div, span {
+      border: 1px solid black;
+    }
+
+    .flex_main {
+      display: flex;
+      flex: 1;
+    }
+    .main_item1 {
+      width: 120px;
+    }
+    .main_item2 {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .gallery img {
+      width: 23%;
+      margin-bottom: 10px;
+      height: auto;
+      border: 1px solid black;
+    }
+
+    .footer_container {
+      margin-top: auto;
+    }
+  </style>
 </head>
+
 <body>
-    <div>
-    <h1>내가 좋아하는 갤러리</h1>
-    <table border="0">
-    <tr>
-        <div class="grid">
-        <td><img src="dog1.jpg" alt="강아지1"></td>
-        <td><img src="dog2.jpg" alt="강아지2"></td>
-        <td><img src="dog3.jpg" alt="강아지3"></td>
-        <td><img src="dog4.jpg" alt="강아지4"></td>
-    </tr>
-    <tr>
-      <td><img src="dog5.jpg"alt="강아지5"></td>
-      <td><img src="dog6.jpg"alt="강아지6"></td>
-      <td><img src="dog7.jpg"alt="강아지7"></td>
-      <td><img src="dog8.jpg"alt="강아지8"></td>
-    </tr>
-    <tr>
-      <td><img src="dog9.jpg"alt="강아지9"></td>
-      <td><img src="dog10.jpg"alt="강아지10"></td>
-      <td><img src="dog11.jpg"alt="강아지11"></td>
-      <td><img src="dog12.jpg"alt="강아지12"></td>
-    </tr>
-    <tr>
-      <td><img src="dog13.jpeg"alt="강아지13"></td>
-      <td><img src="dog14.jpg"alt="강아지14"></td>
-      <td><img src="dog15.jpg"alt="강아지15"></td>
-      <td><img src="dog16.jpg"alt="강아지16"></td>
-    </tr>
-    </table>
-    </div>
+  <div class="html_container">
+
+    <header class="header_container">
+      <div class="header_item1">
+        <div class="logo">logo</div>
+        <div class="search">search</div>
+        <div class="gnb">gnb</div>
+      </div>
+      <div class="header_item2">
+        <div>나에 대하여</div>
+        <div>나의 전공/공부</div>
+        <div>나의 취미들</div>
+      </div>
+    </header>
+
+    <main class="flex_main">
+      <div class="main_item1">좌측 메뉴</div>
+
+      <div class="main_item2">
+        <h1 style="text-align:center;">내가 좋아하는 갤러리</h1>
+
+        <div class="gallery">
+          <img src="dog1.jpg" alt="강아지1">
+          <img src="dog2.jpg" alt="강아지2">
+          <img src="dog3.jpg" alt="강아지3">
+          <img src="dog4.jpg" alt="강아지4">
+          <img src="dog5.jpg" alt="강아지5">
+          <img src="dog6.jpg" alt="강아지6">
+          <img src="dog7.jpg" alt="강아지7">
+          <img src="dog8.jpg" alt="강아지8">
+          <img src="dog9.jpg" alt="강아지9">
+          <img src="dog10.jpg" alt="강아지10">
+          <img src="dog11.jpg" alt="강아지11">
+          <img src="dog12.jpg" alt="강아지12">
+          <img src="dog13.jpeg" alt="강아지13">
+          <img src="dog14.jpg" alt="강아지14">
+          <img src="dog15.jpg" alt="강아지15">
+          <img src="dog16.jpg" alt="강아지16">
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer_container">
+      <div>포트폴리오 기타 정보</div>
+    </footer>
+
+  </div>
 </body>
 </html>
