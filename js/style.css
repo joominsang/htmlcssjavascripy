@@ -1,0 +1,118 @@
+/* =========================
+   전체 프레임
+========================= */
+.frame {
+  background-color: #74422542;
+  width: 100%;
+  min-width: 901px;
+  min-height: 998px;
+  position: relative;
+}
+
+/* =========================
+   상단 입력 영역 (기존 디자인)
+========================= */
+.data-group,
+.group-2,
+.group-3,
+.group-4 {
+  position: absolute;
+  left: 10px;
+  width: 883px;
+  height: 46px;
+}
+
+.data-group { top: 14px; }
+.group-2 { top: 66px; }
+.group-3 { top: 117px; }
+.group-4 { top: 168px; }
+
+.rectangle {
+  position: absolute;
+  width: 130px;
+  height: 46px;
+  background-color: #d9d9d9;
+}
+
+.div {
+  position: absolute;
+  left: 140px;
+  width: 741px;
+  height: 46px;
+  background-color: #ffffff;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 11px;
+  left: 24px;
+  font-size: 24px;
+  color: #000;
+}
+
+/* =========================
+   이미지 & 버튼
+========================= */
+.img {
+  position: absolute;
+  top: 244px;
+  left: 30px;
+  width: 834px;
+  height: 469px;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  top: 731px;
+  width: 116px;
+  height: 53px;
+  background-color: #4297b5;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.add { left: 34px; }
+.btn.edit { left: 164px; }
+.btn.delete { left: 294px; }
+
+/* =========================
+   ⭐ JS 출력 영역 (핵심)
+========================= */
+.frame-2 {
+  position: relative;
+  margin-top: 850px;   /* 기존 디자인 아래 */
+  padding: 10px 20px;
+  background-color: #9db1bb;
+}
+
+/* 리스트 헤더 */
+.list-header,
+.game-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px 120px;
+  gap: 10px;
+  align-items: center;
+}
+
+.list-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* JS로 추가되는 행 */
+.game-row {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.game-row div {
+  padding: 6px;
+  background-color: #d9d9d9;
+  text-align: center;
+}
