@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+        display: grid;
+        /* grid-template-columns: 200px 200px 500px; */
+	    /* grid-template-columns: 1fr 1fr 1fr; */
+	    /* grid-template-columns: repeat(3, 1fr); */
+	    /*grid-template-columns: 50px 1fr;*/
+	    /* grid-template-columns: 100px 200px auto; */
+        grid-template-columns: repeat(auto-fit, minmax(20%, auto));
+
+
+	    /* grid-template-rows: 200px 200px 500px; */
+	    /* grid-template-rows: 1fr 1fr 1fr; */
+	    /* grid-template-rows: repeat(3, 1fr); */
+	    /*grid-template-rows: 50px 1fr;*/
+	    /* grid-template-rows: 100px 200px auto; */
+        row-gap: 10px;
+	    /* row의 간격을 10px로 */
+	    column-gap: 20px;
+	    /* column의 간격을 20px로 */
+
+        /*grid-template-columns: repeat(2, minmax(50%, auto));*/
+
+        grid-auto-rows: minmax(50px, auto);
+    }
+    
+    .container div {
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+	<div class="item">A</div>
+	<div class="item">B</div>
+	<div class="item">C</div>
+	<div class="item">D</div>
+	<div class="item">E</div>
+	<div class="item">F</div>
+	<div class="item">G</div>
+	<div class="item">H</div>
+	<div class="item">I</div>
+</div>
+    <div class="container">
+	<div class="item">A2</div>
+	<div class="item">B2</div>
+	<div class="item">C2</div>
+	<div class="item">D2</div>
+	<div class="item">E2</div>
+	<div class="item">F2</div>
+	<div class="item">G2</div>
+	<div class="item">H2</div>
+	<div class="item">I2</div>
+</div>
+</body>
+</html>

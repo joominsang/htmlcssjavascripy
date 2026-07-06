@@ -353,3 +353,10 @@ async function doGuGuDanAsyncAwait() {
   console.log("성공");
 }
 doGuGuDanAsyncAwait();
+
+// 각각의 1단계 2단 2단계 3단 4단계 5단
+function printGuGuDan2() {
+  for (let i = 1; i <= 9; i++) {
+    console.log(`2 * ${i} = ${2 * i}`);
+  }
+}

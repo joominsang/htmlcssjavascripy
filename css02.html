@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="cls1">div 1
+    <span></span>
+    <span>
+      <div id="id1" class="cls2">div 2
+        <div class="cls3">div 3</div>
+      </div>
+    </span>
+  </div>
+  <div class="cls2 button123">div 2</div>
+  <div id="id2" class="cls3 example">div 3</div>
+  <div class="cls1 highlight">p 1
+    <div>div 4
+      <div class="cls2" >p 2
+        <div id="id3" class="cls3 underline">div 5</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a href="#id1">id 1 이동</a>
+    <a href="#id2">id 1 이동</a>
+    <a href="#id3">id 1 이동</a>
+  </div>
+  <div>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+      <li>item 7</li>
+      <li>item 8</li>
+      <li>item 9</li>
+      <li>item 10</li>
+    </ul>
+  </div>
+  <p>
+<pre>
+input type 스타일
+/* 체크된 체크박스/라디오 */
+input:checked {
+  outline: 2px solid green;
+}
+
+/* 비활성화된 요소 */
+input:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* 활성화된 요소 */
+input:enabled {
+  border-color: #333;
+}
+
+/* 필수 입력 필드 */
+input:required {
+  border-left: 3px solid red;
+}
+
+/* 선택 사항 필드 */
+input:optional {
+  border-left: 3px solid gray;
+}
+
+/* 유효한 입력 */
+input:valid {
+  border-color: green;
+}
+
+/* 유효하지 않은 입력 */
+input:invalid {
+  border-color: red;
+}
+</pre>
+  </p>
+  <div>
+    <input type="text" placeholder="이름을 8자 이내로 입력하세요" maxlength="8" size="40"><br/>
+    <textarea rows="10" cols="100"></textarea>
+  </div>
+</body>
+</html>
+<style>
+  .cls1, .cls2, .cls3 {
+    /* 클래스 cls1 과 cls2 와 cls3 선택요소 */
+    color: red;
+  }
+  .cls1 .cls2 .cls3 {
+    /* 클래스 cls1의 자손 cls2, cls2의 자손 cls3 선택요소 */
+    color: blue;
+  }
+  .highlight {
+    font-weight: 900;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  /*선택자[속성]*/
+  
+  div[class*="button"] {
+  /* class에 "button"이 포함 */
+    border: 1px solid red;
+  }
+  .example {
+    border: 2px solid blue;
+  }
+
+  /* 방문하지 않은 링크 */
+  a:link {
+    color: blue;
+    background-color: yellow;
+  }
+
+  /* 방문한 링크 */
+  a:visited {
+    color: purple;
+    background-color: lightgray;
+  }
+
+  /* 마우스 오버 */
+  a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: lightblue;
+  }
+
+  /* 클릭하는 순간 */
+  a:active {
+    color: orange;
+    background-color: aquamarine;
+  }
+
+  /* 포커스 (탭 키로 선택) */
+  /* input:focus {
+    outline: 2px solid blue;
+    background-color: lightyellow;
+  } */
+
+  li:first-child {
+    /* 첫 번째 자식 */
+    border: 1px solid blue;
+    font-weight: bold;
+  }
+
+  li:last-child {
+    /* 마지막 자식 */
+    border: 2px dashed red;
+    border-bottom: none;
+  }
+
+  li:nth-child(3) {
+    /* n번째 자식 */
+    color: red;
+    border: 3px dotted green;
+  }
+
+  li:nth-child(odd) {
+    /* 홀수 번째 */
+    background-color: #99aaee;
+  }
+
+  li:nth-child(even) {
+    /* 짝수 번째 */
+    background-color: #eeaa99;
+  }
+
+  li:nth-child(3n) {
+    /* 3의 배수 */
+    color: blue;
+    border: 3px dotted green;
+  }
+
+  /* 요소의 첫 글자 */
+  pre::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
+  }
+
+  /* 요소의 첫 줄 */
+  pre::first-line {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  /* 선택된 텍스트 스타일 */
+  ::selection {
+    background-color: yellow;
+    color: black;
+  }
+
+  /* 플레이스홀더 스타일 */
+  input::placeholder {
+    color: #7c5af7;
+    font-style: italic;
+  }
+</style>

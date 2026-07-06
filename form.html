@@ -1,54 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="img/m.png">
 </head>
 <body>
-  <form action="/submit" method="POST">
-    <!-- 텍스트 입력 -->
-    <label for="username">사용자명:</label>
-    <input type="text" id="username" name="username" required size = "40">
-    
-    <!-- 이메일 입력 -->
-    <label for="email">이메일:</label>
-    <input type="email" id="email" name="email" placeholder="example@email.com">
-    
-    <!-- 비밀번호 입력 -->
-    <label for="password">비밀번호:</label>
-    <input type="password" id="password" name="password" minlength="8">
-    
-    <!-- 라디오 버튼 -->
+  <form action="recieve.html" method="GET">
     <fieldset>
-      <legend>성별</legend>
-      <label>
-        <input type="radio" name="gender" value="male"> 남성
-      </label>
-      <label>
-        <input type="radio" name="gender" value="female"> 여성
-      </label>
+      <legend>사용자정보</legend>
+      <!-- 텍스트 입력 -->
+      <label for="username">사용자명:</label>
+      <input type="text" name="username1" value="이순신" readonly >
+      <!-- 이메일 입력 -->
+      <label for="email">이메일:</label>
+      <input type="email" name="email1">
+      <!-- 비밀번호 입력 -->
+      <label for="password">비밀번호:</label>
+      <input type="password" name="passwd1" disabled >
     </fieldset>
+
+    <!-- 라디오 버튼 -->
+     <label>남성<input type="radio" name="gender" value="male"></label>
+     <label>여성</label><input type="radio" name="gender" value="female">
     
     <!-- 체크박스 -->
-    <label>
-      <input type="checkbox" name="agree" required>
-      약관에 동의합니다
-    </label>
+      <input type="checkbox" name="agree" > 약관동의
     
     <!-- 선택 박스 -->
     <label for="country">국가:</label>
-    <select id="country" name="country">
+    <select id="country" name="country" multiple>
       <option value="">선택하세요</option>
       <option value="kr">한국</option>
       <option value="us">미국</option>
       <option value="jp">일본</option>
+      <option value="cn">중국</option>
+      <option value="de">독일</option>
     </select>
     
     <!-- 텍스트 영역 -->
     <label for="message">메시지:</label>
     <textarea id="message" name="message" rows="5" cols="30"></textarea>
+    <input type="textarea">
     
+    <!-- 숫자 -->
+    <input type="number" min="0" max="100" step="5" name="age" value="20">
+
+    <!-- 날짜 -->
+    <input type="date" name="birthdate">
+    <input type="time">
+    <input type="datetime-local">
+
+    <!-- 색상 선택 -->
+    <input type="color">
+
+    <!-- 범위 슬라이더 -->
+    <input type="range" min="0" max="100" value="50" step="10">
+
+    <!-- 파일 업로드 -->
+    <input type="file" accept="image/*" multiple>
+
+    <!-- URL -->
+    <input type="url">
+
+    <!-- 전화번호 -->
+    <input type="tel">
+
+    <!-- 검색 -->
+    <input type="search">
+
+    
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Edge">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+
     <!-- 제출 버튼 -->
     <button type="submit">제출</button>
     <button type="reset">초기화</button>

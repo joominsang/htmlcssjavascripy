@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹 접근성 예제 - 명확한 페이지 제목</title>
+  <style>
+		/* 건너뛰기 링크 스타일 */
+		.skip-link {
+		  position: absolute;
+		  top: -40px;
+		  left: 0;
+		  background: #000;
+		  color: #fff;
+		  padding: 8px;
+		  text-decoration: none;
+		  z-index: 100;
+		}
+		
+		.skip-link:focus {
+		  top: 0; /* 포커스시 표시 */
+		}
+  </style>
+</head>
+<body>
+  <!-- 건너뛰기 링크 제공 -->
+  <a href="#main-content" class="skip-link">본문으로 바로가기</a>
+  
+  <!-- 의미있는 시맨틱 태그 사용 -->
+  <header>
+    <nav aria-label="주 메뉴">
+      <ul>
+        <li><a href="/">홈</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="main-content">
+    <!-- 명확한 제목 구조 (h1 > h2 > h3) -->
+    <h1>웹 접근성 가이드</h1>
+    
+    <section>
+      <h2>접근성의 중요성</h2>
+      <p>모든 사람이 웹을 이용할 수 있어야 합니다.</p>
+      <button onclick="alert('클릭됨');">클릭해보세요</button>
+      <div tabindex="0" onclick="alert('액션됨1');" onkeydown="if(event.key === 'Enter') alert('액션됨1');">액션1해보세요</div>
+      <div tabindex="0" onclick="alert('액션됨2');" onkeydown="if(event.key === 'Enter') alert('액션됨2');">액션2해보세요</div>
+      <div tabindex="0" onclick="alert('액션됨3');" onkeydown="if(event.key === 'Enter') alert('액션됨2');">액션3해보세요</div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 접근성 웹사이트</p>
+  </footer>
+</body>
+</html>

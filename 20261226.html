@@ -1,0 +1,115 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹 만들기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+        margin:0;
+        background:#f6f0e3;
+        font-family: Arial, sans-serif;
+        }
+
+        .wrap{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        }
+
+        .singhomepage{
+        background-color: rgba(232, 152, 23, 0.932);
+        text-align: center;
+        min-height: 200px;
+        border-radius: 10px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size: 28px;
+        font-weight: 700;
+        }
+
+        .singtitle, .singreco, .singerreco{
+        border-radius: 10px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size: 20px;
+        font-weight: 600;
+        }
+
+        .singtitle{
+        min-height: 120px;
+        background-color: rgba(204, 204, 167, 0.394);
+        }
+        .singreco{
+        min-height: 140px;
+        background-color: rgba(204, 204, 167, 0.394);
+        }
+        .singerreco{
+        min-height: 300px;
+        background-color: rgb(61, 162, 24);
+        color: #fff;
+        }
+
+        .content{
+        margin-top: 20px;
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+            "title"
+            "reco"
+            "singer";
+        }
+        .singtitle   {
+            grid-area: title;
+        }
+        .singreco    {
+            grid-area: reco;
+        }
+        .singerreco  {
+            grid-area: singer;
+        }
+
+        @media (min-width: 768px){
+        .content{
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:
+            "title singer"
+            "reco  singer";
+        }
+        .singerreco{ min-height: 320px; }
+        }
+
+        @media (min-width: 1024px){
+        .wrap{
+            padding: 40px;
+        }
+        .content{
+            gap: 25px;
+        }
+        .singhomepage{
+            min-height: 220px;
+        }
+        .singerreco{
+            min-height: 360px;
+        }
+        }
+    </style>
+    </head>
+    <body>
+    <div class="wrap">
+        <header class="singhomepage">노래 홈페이지</header>
+
+        <div class="content">
+        <main class="singtitle">노래 제목</main>
+        <div class="singreco">노래 추천 목록</div>
+        <footer class="singerreco">가수 추천 목록</footer>
+        </div>
+    </div>
+    </body>
+    </html>

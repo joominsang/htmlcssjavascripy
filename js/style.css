@@ -1,118 +1,289 @@
-/* =========================
-   전체 프레임
-========================= */
-.frame {
-  background-color: #74422542;
-  width: 100%;
-  min-width: 901px;
-  min-height: 998px;
-  position: relative;
-}
-
-/* =========================
-   상단 입력 영역 (기존 디자인)
-========================= */
-.data-group,
-.group-2,
-.group-3,
-.group-4 {
-  position: absolute;
-  left: 10px;
-  width: 883px;
-  height: 46px;
-}
-
-.data-group { top: 14px; }
-.group-2 { top: 66px; }
-.group-3 { top: 117px; }
-.group-4 { top: 168px; }
-
-.rectangle {
-  position: absolute;
-  width: 130px;
-  height: 46px;
-  background-color: #d9d9d9;
-}
-
-.div {
-  position: absolute;
-  left: 140px;
-  width: 741px;
-  height: 46px;
+.screen {
   background-color: #ffffff;
+  width: 100%;
+  min-width: 491px;
+  min-height: 542px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.text-wrapper {
-  position: absolute;
-  top: 11px;
-  left: 24px;
-  font-size: 24px;
-  color: #000;
+.screen .frame {
+  height: 330px;
+  position: relative;
+  margin-top: 11px;
+  background-color: #f4e8e8;
+  margin-left: 10px;
+  width: 469px;
 }
 
-/* =========================
-   이미지 & 버튼
-========================= */
-.img {
+.screen .group {
   position: absolute;
-  top: 244px;
-  left: 30px;
-  width: 834px;
-  height: 469px;
+  top: 9px;
+  left: 10px;
+  width: 451px;
+  height: 32px;
+}
+
+.screen .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper {
+  top: 7px;
+  left: 13px;
+  width: 74px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .div {
+  position: absolute;
+  top: 0;
+  left: 107px;
+  width: 342px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .group-2 {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  width: 451px;
+  height: 32px;
+}
+
+.screen .group-3 {
+  position: absolute;
+  top: 33px;
+  left: 10px;
+  width: 449px;
+  height: 42px;
+}
+
+.screen .group-4 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 451px;
+  height: 32px;
+}
+
+.screen .rectangle-2 {
+  position: absolute;
+  top: 10px;
+  left: 423px;
+  width: 26px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .polygon {
+  position: absolute;
+  top: 10px;
+  left: 425px;
+  width: 23px;
+  height: 31px;
+}
+
+.screen .group-5 {
+  position: absolute;
+  top: 67px;
+  left: 10px;
+  width: 449px;
+  height: 42px;
+}
+
+.screen .img {
+  position: absolute;
+  top: 145px;
+  left: 6px;
+  width: 457px;
+  height: 147px;
   object-fit: cover;
 }
 
-.btn {
+.screen .group-6 {
   position: absolute;
-  top: 731px;
-  width: 116px;
-  height: 53px;
-  background-color: #4297b5;
-  color: #fff;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
+  top: 292px;
+  left: 13px;
+  width: 98px;
+  height: 32px;
 }
 
-.btn.add { left: 34px; }
-.btn.edit { left: 164px; }
-.btn.delete { left: 294px; }
-
-/* =========================
-   ⭐ JS 출력 영역 (핵심)
-========================= */
-.frame-2 {
-  position: relative;
-  margin-top: 850px;   /* 기존 디자인 아래 */
-  padding: 10px 20px;
-  background-color: #9db1bb;
+.screen .rectangle-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 32px;
+  background-color: #adedc6;
 }
 
-/* 리스트 헤더 */
-.list-header,
-.game-row {
-  display: grid;
-  grid-template-columns: 120px 1fr 120px 120px;
-  gap: 10px;
-  align-items: center;
-}
-
-.list-header {
+.screen .text-wrapper-2 {
+  top: 6px;
+  left: 28px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-/* JS로 추가되는 행 */
-.game-row {
-  background-color: #ffffff;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 4px;
+.screen .group-7 {
+  position: absolute;
+  top: 292px;
+  left: 123px;
+  width: 204px;
+  height: 32px;
 }
 
-.game-row div {
-  padding: 6px;
+.screen .group-8 {
+  position: absolute;
+  top: 0;
+  left: 106px;
+  width: 98px;
+  height: 32px;
+}
+
+.screen .frame-2 {
+  height: 182px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  align-items: flex-start;
+  background-color: #dedaed;
+  margin-left: 10px;
+  width: 469px;
+}
+
+.screen .group-9 {
+  width: 461px;
+  margin-left: 4px;
+  display: flex;
+  gap: 2px;
+}
+
+.screen .group-10 {
+  width: 106px;
+  height: 29px;
+  position: relative;
+}
+
+.screen .rectangle-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 104px;
+  height: 29px;
   background-color: #d9d9d9;
-  text-align: center;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper-3 {
+  top: 4px;
+  left: 9px;
+  text-shadow: 0px 4px 4px #b8919140;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .group-11 {
+  width: 247px;
+  height: 29px;
+  position: relative;
+}
+
+.screen .rectangle-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 245px;
+  height: 29px;
+  background-color: #d9d9d9;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper-4 {
+  top: 4px;
+  left: 9px;
+  width: 61px;
+  position: absolute;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .text-wrapper-5 {
+  top: 4px;
+  left: 9px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .group-12 {
+  width: 461px;
+  margin-top: 2px;
+  margin-left: 4px;
+  display: flex;
+  gap: 2px;
+}
+
+.screen .text-wrapper-6 {
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  width: 226px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .group-13 {
+  width: 461px;
+  margin-top: 3px;
+  margin-left: 4px;
+  display: flex;
+  gap: 2px;
 }

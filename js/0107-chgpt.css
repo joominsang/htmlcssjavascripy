@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+}
+
+main {
+  padding: 10px;
+}
+
+#inputSection fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#inputSection fieldset > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+#inputSection label {
+  font-weight: bold;
+}
+
+#inputSection input {
+  padding: 6px;
+}
+
+#inputSection fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+#listSection fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.titleDiv {
+  display: none;
+}
+
+#ulList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.dataLi {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.dataLi > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.dataLi > div::before {
+  font-weight: bold;
+  color: #555;
+}
+
+.dataLi > div:nth-child(1)::before { content: "ID"; }
+.dataLi > div:nth-child(2)::before { content: "NAME"; }
+.dataLi > div:nth-child(3)::before { content: "KOR"; }
+.dataLi > div:nth-child(4)::before { content: "ENG"; }
+.dataLi > div:nth-child(5)::before { content: "MAT"; }
+.dataLi > div:nth-child(6)::before { content: "CLASS"; }
+
+@media (min-width: 768px) {
+  #inputSection fieldset {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #ulList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #inputSection fieldset {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #ulList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

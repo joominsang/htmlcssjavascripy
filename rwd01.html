@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --main-background-color: cornsilk;
+      --main-color: rgb(100, 69, 69);
+    }
+    .html_body {
+      background-color: var(--main-background-color);
+      color: var(--main-color);
+    }
+    .header_item{
+      text-align: center;
+      font-size: 52px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid darkslategrey;
+      margin: 12px 24px;
+      padding: 10px 28px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 7px grey;
+      
+      /* box-shadow: 2px 2px 5px 2px #ff00ff,
+                  inset 0px -2em 3em 0 #00ff00,
+                  5px 5px 20px 5px #00ffff; */
+    }
+    .card_title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      padding: 14px 20px;
+    }
+    .card_text {
+      padding: 0.5rem 20px 0px 20px;
+    }
+    .card_text::before {
+      content: "• "; /* 둥근 점 기호 삽입 */
+      color: #333; /* 점 색상 설정 */
+      font-size: 1.2em; /* 점 크기 설정 */
+      /* 필요에 따라 위치 조정 */
+    }
+    .cinema {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(200, 15, 15, 0.2);
+    }
+    .cinema_title {
+      background-color: rgba(233, 7, 7, 0.2);
+    }
+    .cinema_story::before {
+      content: "♣ "; /* 둥근 점 기호 삽입 */
+      color: #3718e7; /* 점 색상 설정 */
+      font-size: 1.2em; /* 점 크기 설정 */
+      /* 필요에 따라 위치 조정 */
+    }
+    .actor {
+      background-color: rgba(15, 15, 220, 0.2);
+    }
+    .actor_name {
+      background-color: rgba(15, 15, 220, 0.5);
+    }
+    .actor_description::before {
+      content: "- {";
+    }
+    .actor_description::after {
+      content: "}";
+    }
+    .footer_item {
+      background-color: darkgrey;
+      margin-bottom: 24px;
+      margin-right: 24px;
+      margin-left: 24px;
+      padding: 12px 28px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .header_item{
+        font-size: 60px;
+      }
+      .card {
+        margin: 16px 16px;
+        padding: 14px 18px;
+      }
+      .card_title {
+        font-size: 32px;
+      }
+      .movie_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .actor_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    .footer_item {
+      margin-right: 16px;
+      margin-left: 16px;
+      padding: 12px 28px;
+    }
+    }
+
+    @media (min-width: 1024px) {
+      .header_item{
+        font-size: 72px;
+      }
+      .card_title {
+        font-size: 36px;
+      }
+      .movie_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .actor_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px 2px;
+      }
+    }
+    .screen_control {
+      position: sticky;
+      top: 5px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="html_body">
+  <div class="screen_control">
+    <label>환한화면</label>
+    <input type="radio" name="theme" checked onclick="changeLight();">
+    <label>어두운화면</label>
+    <input type="radio" name="theme" onclick="changeDark();">
+  </div>
+  <script>
+    function changeLight() {
+      // alert('환한화면 만든다.');
+      document.documentElement.style.setProperty('--main-background-color', 'cornsilk');
+      document.documentElement.style.setProperty('--main-color', 'black');
+    }
+    function changeDark() {
+      // alert('어두운화면 만든다.');
+      document.documentElement.style.setProperty('--main-background-color', 'black');
+      document.documentElement.style.setProperty('--main-color', 'white');
+    }
+  </script>
+  <header>
+    <h1 class="header_item">영화정보</h1>
+  </header>
+
+  <main>
+    <section class="movie_section">
+      <div class="card">
+        <div class="card_title">십계</div>
+        <div class="card_text">이스라엘 고대 민족의 이집트 탈출기</div>
+      </div>
+      <div class="cinema card">
+        <div class="cinema_title card_title">삼국지</div>
+        <div class="cinema_story card_text">중국의 삼국역사 이야기</div>
+      </div>
+      <div class="cinema card">
+        <div class="cinema_title card_title">베베핀</div>
+        <div class="cinema_story card_text">아기상어 동요로 시작된 유아용 애니메이션</div>
+      </div>
+    </section>
+    <section class="actor_section">
+      <div class="card">
+        <div class="card_title">송강호</div>
+        <div class="card_text">한국의 훌륭한 배우</div>
+        <div class="card_text">1969년생</div>
+      </div>
+      <div class="actor card">
+        <div class="actor_name card_title">안성기</div>
+        <div class="actor_description card_text">한국의 배우2세대 훌륭한 배우</div>
+      </div>
+      <div class="actor card">
+        <div class="actor_name card_title">전도연</div>
+        <div class="actor_description card_text">영화제 수상 다수, 연기파 여배우</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_item">@Copyright free, made by 최원철 (2025-12-24)</div>
+  </footer>
+</body>
+</html>

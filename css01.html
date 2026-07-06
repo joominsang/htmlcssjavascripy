@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* CSS 문법
+    선택자(태그, .클래스명, #아이디명, 특수지정) {
+      CSS속성이름: CSS속성값;
+      CSS속성이름: CSS속성값;
+    }
+     */
+    .title {
+      color: blue;
+      font-size: 48px;
+    }
+    .content {
+      color: gray;
+      font-size: 24px;
+    }
+    /* div 태그 안에 모든 p 태그 */
+    div p {
+        background-color:lightskyblue;
+    }
+    /* span의 직계 자식 p만 선택 */
+    span > p {
+        color: red;
+    }
+    /* 방문하지 않은 링크 */
+    a:link{
+        color:blue;
+        background-color: lightyellow;
+    }
+
+    /* 방문한 링크 */
+    a:visited{
+        color: purple;
+        background-color: lightgreen;
+    }
+
+    /* 마우스 오버 */
+    a:hover{
+        color:red;
+        
+    }
+
+    /* 클릭하는 순간*/
+    a:active{
+        color:orange;
+        background-color: ;
+    }
+  </style>
+</head>
+<body>
+  <p class="title">내부 스타일</p>
+  <p class="content">내부 스타일</p>
+  <div>
+    <p class="content">div 안의 p 태그</p>
+    <span>
+        <p>div &gt; span &gt; p</p>
+        <div>
+            <p>12341234</p>
+        </div>
+    </span>
+  </div>
+     <a href="http://www.naver.com" id="A1" title="네이버보기" target="_blank">
+     <b id="B1">네이버</b>로 바로가기<br>
+      </a>
+      <a href="mailto:abcd@naver.com" id="A2">abcd@naver.com 메일 보내기</a><br>
+      <a href="tel:010-1111-2222" id="A3">전화걸기</a><br>
+      <a href="#p1">p1 으로 이동</a><br>
+</body>
+</html>

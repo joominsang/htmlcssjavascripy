@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      overflow: auto;
+    }
+    div {
+      border: 1px solid black;
+      width: 30%;
+    }
+
+    .div1 {
+      border-style: double;
+      width: 200px;
+      box-sizing: border-box;
+      top: 50px;
+      left: 200px;
+      display: block;
+      /* visibility: hidden; */
+    }
+
+    .div2 {
+      width: 400px;
+      margin: 10px 30px 40px 20px;
+      top: 250px;
+      left: 400px;
+      display: block;
+    }
+
+    .div3 {
+      width: 300px;
+      display: block;
+    }
+
+    .div4 {
+      width: 100px;
+      height: 80px;
+      display: block;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">div 1</div>
+  <div class="div2">div 2
+    <div class="div4">div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4 div 4</div>
+  </div>
+  <div class="div3">div 3</div>
+  <style>
+    .btn1 {
+      display: inline;
+      border-style: inset;
+      margin: 10px;
+    }
+    .btn2 {
+      border-style: double;
+      margin: 10px;
+    }
+    .btn3 {
+      border-radius: 3px;
+      border-color: green;
+      border-style: solid;
+      margin: 10px;
+    }
+    .btn3:hover {
+      border-color: lightgreen;
+      border-style: outset;
+      margin: 10px;
+    }
+    .btn3:active {
+      border-color: darkgreen;
+      border-style: inset;
+      margin: 10px;
+    }
+  </style>
+  <button class="btn1">button 1</button>
+  <button class="btn2">button 2</button>
+  <button class="btn3">button 3</button>
+
+  <style>
+  .box { background:#eef; border:1px solid #99c; padding:8px; margin:6px; }
+  .block { display:block; width:200px; }
+  .inline { display:inline; width:200px; }          /* width 무시 */
+  .inline-block { display:inline-block; width:200px; }
+  </style>
+  <span class="box block">display: block</span>
+  <span class="box inline">display: inline</span>
+  <span class="box inline-block">display: inline-block</span>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+  <div>1234</div>
+</body>
+</html>
